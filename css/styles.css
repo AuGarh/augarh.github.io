@@ -1,0 +1,1086 @@
+/*==================== Import Font ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&display=swap");
+
+/*==================== กำหนดตัวแปร ====================*/
+:root {
+  /*========== สี ==========*/
+  --first-color: hsl(40, 69%, 61%);
+  --first-color-second: hsl(40, 69%, 61%);
+  --first-color-alt: hsl(40, 57%, 53%);
+  --first-color-lighter: hsl(40, 92%, 85%);
+  --title-color: hsl(40, 8%, 15%);
+  --text-color: hsl(40, 8%, 45%);
+  --text-color-light: hsl(40, 8%, 65%);
+  --input-color: hsl(40, 70%, 96%);
+  --body-color: hsl(40, 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(40, 12%, 90%);
+  --scroll-thumb-color: hsl(40, 12%, 80%);
+
+  /*========== ขนาดฟอนต์ ==========*/
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+}
+
+/* สำหรับจอที่ใหญ่กว่า 968px */
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*========== สีสำหรับ Dark theme ==========*/
+body.dark-theme {
+  --first-color-second: hsl(40, 30%, 8%);
+  --title-color: hsl(40, 8%, 95%);
+  --text-color: hsl(40, 8%, 75%);
+  --input-color: hsl(40, 29%, 16%);
+  --body-color: hsl(40, 28%, 12%);
+  --container-color: hsl(40, 29%, 16%);
+  --scroll-bar-color: hsl(40, 12%, 48%);
+  --scroll-thumb-color: hsl(40, 12%, 36%);
+}
+
+/*========== ปุ่มเปลี่ยนธีม ==========*/
+.nav__btns {
+  display: flex;
+  align-items: center;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  color: var(--first-color);
+}
+
+/*==================== Base ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 3rem 0;
+  font-family: "Mitr", sans-serif;
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,h2,h3,h4 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== ใช้ซ้ำ Section ====================*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 3rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+/*==================== ใช้ซ้ำ Layout ====================*/
+.container {
+  max-width: 768px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+}
+
+/*==================== แถบ Navigation ====================*/
+.nav {
+  max-width: 968px;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+.nav__logo:hover {
+  color: var(--first-color);
+}
+
+.nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav__toggle:hover {
+  color: var(--first-color);
+}
+
+/* เปลี่ยนแถบเมนู เมื่อจอเล็กกว่า 767px */
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+  }
+}
+
+.nav__list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__icon {
+  font-size: 1.2rem;
+}
+
+.nav__close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.nav__close:hover {
+  color: var(--first-color-alt);
+}
+
+/* ฟังก์ชั่นซ่อน/โชว์เมนู */
+.show-menu {
+  bottom: 0;
+}
+
+/* ฟังก์ชั่นไฮไลท์ตามหัวข้อที่เลื่อนผ่าน */
+.active-link {
+  color: var(--first-color);
+}
+
+/* ฟังก์ชั่นเพิ่มเงาหลัง Header */
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*==================== Home ====================*/
+.home__container {
+  gap: 1rem;
+}
+
+.home__content {
+  grid-template-columns: 0.5fr 3fr;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+
+.home__social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+.home__social-icon {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.home__social-icon:hover {
+  color: var(--first-color-alt);
+}
+
+.home__blob {
+  width: 270px;
+  fill: var(--first-color);
+}
+
+.home__blob-img {
+  width: 170px;
+}
+
+.home__data {
+  grid-column: 1/3;
+}
+
+.home__title {
+  font-size: var(--h3-font-size);
+}
+
+.home__subtitle {
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/*==================== typing ====================*/
+.home__description {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.3rem;
+  position: relative;
+  width: max-content;
+  margin-top: 1.5rem;
+}
+
+.home__description::before,
+.home__description::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.home__description::before {
+  background: var(--body-color);
+  animation: typewriter 4s steps(18) 1s forwards;
+}
+
+.home__description::after {
+  width: 0.125rem;
+  background: var(--text-color);
+  animation: typewriter 4s steps(18) 1s forwards, blink 0.75s steps(18) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+
+.home__scroll {
+  display: none;
+}
+
+.home__scroll-button {
+  color: var(--first-color);
+  transition: 0.3s;
+}
+
+.home__scroll-button:hover {
+  transform: translateY(0.25rem);
+}
+
+.home__scroll-mouse {
+  font-size: 2rem;
+}
+
+.home__scroll-name {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  font-weight: 500;
+  margin-right: 0.25rem;
+}
+
+.home__scroll-arrow {
+  font-size: 1.25rem;
+}
+
+/*==================== ใช้ซ้ำ Button ====================*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+  transition: 0.3s;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+/*==================== About ====================*/
+.about__img {
+  width: 170px;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.about__description {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.about__info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2.5rem;
+}
+
+.about__info-title {
+  font-size: var(--h2-font-size);
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.about__info-name {
+  font-size: var(--smaller-font-size);
+}
+
+.about__info-title,
+.about__info-name {
+  display: block;
+  text-align: center;
+}
+
+.about__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/*==================== Quotes ====================*/
+.quotes {
+    text-align: center;
+  }
+  
+  .quotes__bg {
+    background-color: var(--first-color-second);
+    padding-top: 3rem;
+  }
+  
+  .quotes__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 0.75rem;
+  }
+  
+  .quotes__title,
+  .quotes__description {
+    color: #fff;
+  }
+  
+  .quotes__img {
+    width: 300px;
+    height: auto;
+    justify-self: center;
+  }
+
+/*==================== Skills ====================*/
+.skills__container {
+  row-gap: 0;
+}
+
+.skills__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+
+.skills__icon,
+.skills__arrow {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.skills__icon {
+  margin-right: 0.75rem;
+}
+
+.skills__title {
+  font-size: var(--h3-font-size);
+}
+
+.skills__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.skills__list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+
+.skills__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skills__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.4s;
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
+}
+
+.skills__bar {
+  background-color: var(--first-color-lighter);
+}
+
+.skills__percentage {
+  display: block;
+  background-color: var(--first-color);
+}
+
+.skills__html {
+  width: 75%;
+}
+
+.skills__css {
+  width: 70%;
+}
+
+.skills__js {
+  width: 50%;
+}
+
+.skills__php {
+  width: 65%;
+}
+
+.skills__dart {
+  width: 15%;
+}
+
+.skills__vscode {
+  width: 80%;
+}
+.skills__photoshop {
+  width: 65%;
+}
+.skills__flutter {
+  width: 15%;
+}
+
+.skills__close .skills__list {
+  height: 0;
+  overflow: hidden;
+}
+
+.skills__open .skills__list {
+  height: max-content;
+  margin-bottom: 2.5rem;
+}
+
+.skills__open .skills__arrow {
+  transform: rotate(-180deg);
+}
+
+/*==================== Background ====================*/
+.background__tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.background__button {
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.background__button:hover {
+  color: var(--first-color);
+}
+
+.background__icon {
+  font-size: 1.8rem;
+  margin-right: 0.25rem;
+}
+
+.background__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+
+.background__title {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+
+.background__subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: 1rem;
+}
+
+.background__calendar {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.background__rounder {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+.background__line {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--first-color);
+  transform: translate(6px, -7px);
+}
+
+.background [data-content] {
+  display: none;
+}
+
+.background__active[data-content] {
+  display: block;
+}
+
+.background__button.background__active {
+  color: var(--first-color);
+}
+
+/*==================== Portfolio ====================*/
+.portfolio__container {
+  overflow: initial;
+}
+
+.portfolio__content {
+  padding: 0 1.5rem;
+}
+
+.portfolio__img {
+  width: 265px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+.portfolio__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.portfolio__description {
+  margin-bottom: 0.75rem;
+}
+
+.portfolio__button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-portfolio-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.swiper-button-prev {
+  left: -0.5rem;
+}
+
+.swiper-button-next {
+  right: -0.5rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--first-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullets {
+  outline: none;
+}
+
+/*==================== Contact Me ====================*/
+.contact {
+  padding-top: 2rem;
+}
+
+.contact__container {
+  row-gap: 3rem;
+}
+
+.contact__information {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.contact__icon {
+  font-size: 2rem;
+  margin-right: 0.75rem;
+  color: var(--first-color-lighter);
+}
+
+.contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+}
+
+.contact__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+
+/*==================== FOOTER ====================*/
+.footer {
+  padding-top: 2rem;
+}
+
+.footer__bg {
+  background-color: var(--first-color-second);
+  padding: 2rem 0 3rem;
+}
+
+.footer__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.footer__subtitle {
+  font-size: var(--small-font-size);
+}
+
+.footer__links {
+  row-gap: 1.5rem;
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.footer__social:hover {
+  color: var(--first-color-lighter);
+}
+
+.footer__title,
+.footer__subtitle,
+.contact__title,
+.contact__icon,
+.footer__social {
+  color: #fff;
+}
+
+.contact__information:hover,
+.contact__information:hover .contact__icon,
+.contact__information:hover .contact__title,
+.contact__information:hover .contact__subtitle {
+  color: var(--first-color-lighter);
+}
+
+/*========== ปุ่ม Scroll Up ==========*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  opacity: 0.8;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+}
+
+.scrollup__icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* โชว์ปุ่ม Scroll Up */
+.show-scroll {
+  bottom: 5rem;
+}
+
+/*========== Scroll Bar ==========*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color-light);
+}
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (max-width: 568px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .nav__menu {
+    padding: 2rem 0.25rem 4rem;
+  }
+  .nav__list {
+    column-gap: 0;
+  }
+
+  .home__content {
+    grid-template-columns: 0.25fr 3fr;
+  }
+  .home__blob {
+    width: 250px;
+  }
+
+  .skills__title {
+    font-size: var(--normal-font-size);
+  }
+
+  .background__data {
+    gap: 0.5rem;
+  }
+
+  .footer__hidden {
+    display: none;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 568px) {
+  .home__content {
+    grid-template-columns: max-content 1fr 1fr;
+  }
+
+  .home__description {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .home__data {
+    grid-column: initial;
+  }
+  .home__img {
+    order: 1;
+    justify-self: center;
+  }
+
+  .about__img {
+    width: 200px;
+  }
+
+  .about__container,
+  .skills__container,
+  .portfolio__content,
+  .quotes__container,
+  .contact__container,
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quotes__bg {
+    padding-bottom: 3rem;
+  }
+
+  .background__sections {
+    display: grid;
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+  .footer {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .section__subtitle {
+    margin-bottom: 4rem;
+  }
+
+  .header {
+    top: 0;
+    bottom: initial;
+  }
+
+  .header,
+  .main,
+  .footer__container {
+    padding: 0 1rem;
+  }
+
+  .nav {
+    height: calc(3rem + 1.5rem);
+    column-gap: 1rem;
+  }
+  .nav__icon,
+  .nav__close,
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    column-gap: 2rem;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+  .change-theme {
+    margin: 0;
+  }
+
+  .home__container {
+    row-gap: 4rem;
+  }
+  .home__content {
+    padding-top: 2rem;
+    column-gap: 2rem;
+  }
+  .home__blob {
+    width: 370px;
+  }
+  .home__scroll {
+    display: block;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(4s + 1s) forwards;
+  }
+  .home__scroll-button {
+    margin-left: 3rem;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .about__container {
+    column-gap: 5rem;
+  }
+  .about__img {
+    width: 300px;
+  }
+  .about__description {
+    text-align: initial;
+  }
+  .about__info {
+    justify-content: space-between;
+  }
+  .about__buttons {
+    justify-content: initial;
+  }
+
+  .background__tabs {
+    justify-content: center;
+  }
+  .background__button {
+    margin: 0 1rem;
+  }
+  .background__sections {
+    grid-template-columns: 0.5fr;
+  }
+
+  .portfolio__img {
+    width: 320px;
+  }
+  .portfolio__content {
+    align-items: center;
+  }
+
+  .quotes {
+    text-align: initial;
+  }
+  .quotes__bg {
+    background: none;
+  }
+  .quotes__container {
+    background-color: var(--first-color-second);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem 3rem;
+    grid-template-columns: 1fr max-content;
+    column-gap: 3rem;
+  }
+  .quotes__data {
+    padding-top: 0.8rem;
+  }
+  .quotes__img {
+    width: 350px;
+  }
+  .footer {
+    margin-top: 6rem;
+  }
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer__bg {
+    padding: 3rem 0 3.5rem;
+  }
+  .footer__hidden {
+    display: none;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .header,
+  .main,
+  .footer__container {
+    padding: 0;
+  }
+
+  .home__blob {
+    width: 400px;
+  }
+  .home__social {
+    transform: translateX(-6rem);
+  }
+
+  .portfolio__content {
+    column-gap: 5rem;
+  }
+  .swiper-portfolio-icon {
+    font-size: 3.5rem;
+  }
+  .swiper-button-prev {
+    left: -3.5rem;
+  }
+  .swiper-button-next {
+    right: -3.5rem;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: -4.5rem;
+  }
+  .footer__hidden {
+    display: none;
+  }
+}

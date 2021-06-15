@@ -1,7 +1,617 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>AuGarh Portfolio</title>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">AuGarh</a>
+
+            <!--==================== แถบ Menu ====================-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> HOME
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> ABOUT
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> SKILLS
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> PORTFOLIO
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> CONTACTME
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <!-- ปุ่มเปลี่ยนธีม -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <!-- ปุ่มเปิดเมนู -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== Main ====================-->
+    <main class="main">
+        <!--==================== Home ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/au.garh/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/au.garh" target="_blank" class="home__social-icon">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/au%20garh" target="_blank" class="home__social-icon">
+                            <i class="uil uil-youtube"></i>
+                        </a>
+                        <a href="https://github.com/AuGarh" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path
+                                    d="M34.7,-58.2C47.7,-52.5,63.1,-48.9,71,-39.6C78.9,-30.2,79.2,-15.1,76.3,-1.7C73.4,11.8,67.3,23.5,60.3,34.4C53.3,45.3,45.5,55.3,35.3,62.7C25.2,70.1,12.6,74.8,-1,76.5C-14.6,78.3,-29.2,77.1,-43.5,72.1C-57.8,67.1,-71.7,58.3,-80.6,45.6C-89.4,33,-93,16.5,-89,2.3C-85,-11.9,-73.4,-23.8,-63.6,-34.7C-53.8,-45.7,-45.9,-55.8,-35.6,-63.1C-25.4,-70.4,-12.7,-74.9,-0.9,-73.3C10.8,-71.7,21.6,-63.9,34.7,-58.2Z"
+                                    transform="translate(100 100)" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path
+                                    d="M34.7,-58.2C47.7,-52.5,63.1,-48.9,71,-39.6C78.9,-30.2,79.2,-15.1,76.3,-1.7C73.4,11.8,67.3,23.5,60.3,34.4C53.3,45.3,45.5,55.3,35.3,62.7C25.2,70.1,12.6,74.8,-1,76.5C-14.6,78.3,-29.2,77.1,-43.5,72.1C-57.8,67.1,-71.7,58.3,-80.6,45.6C-89.4,33,-93,16.5,-89,2.3C-85,-11.9,-73.4,-23.8,-63.6,-34.7C-53.8,-45.7,-45.9,-55.8,-35.6,-63.1C-25.4,-70.4,-12.7,-74.9,-0.9,-73.3C10.8,-71.7,21.6,-63.9,34.7,-58.2Z"
+                                    transform="translate(100 100)" />
+
+                                <image class="home__blob-img" x='12' y='18' xlink:href="img/perfil.png" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I'am AuGarh</h1>
+                        <h3 class="home__subtitle">Bachelor of ComSci at BSRU</h3>
+                        <!-- typing -->
+                        <p class="home__description">
+                            I am a Programmer.
+                        </p>
+                    </div>
+                </div>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== About ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
+
+            <div class="about__container container grid">
+                <img src="img/about.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <p class="about__description">
+                        นักศึกษาคนหนึ่งที่อยากพัฒนาความรู้และความสามารถด้านการเขียนโปรแกรมให้มีคุณภาพยิ่งขึ้นไปเรื่อยๆ
+                        และสะสมประสบการณ์การทำงานควบคู่กัน</p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">22</span>
+                            <spen class="about__info-name">อายุ <br> Age</spen>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">3.67</span>
+                            <spen class="about__info-name">เกรดเฉลี่ย <br> GPA</spen>
+                        </div>
+
+                        <div>
+                            <span class="about__info-title">4y+</span>
+                            <spen class="about__info-name">ประสบการณ์ทำงาน <br> work experience</spen>
+                        </div>
+                    </div>
+
+                    <div class="about__buttons">
+                        <a download="" href="pdf/resume.pdf" class="button button--flex">
+                            Download Resume <i class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Quotes ====================-->
+        <section class="quotes section">
+
+            <div class="quotes__bg">
+                <div class="quotes__container container grid">
+                    <div class="quotes__data">
+                        <h2 class="quotes__title">Knowing is not enough;<br>we must apply.<br>Willing is not
+                            enough;<br>we must do.</h2>
+                        <p class="quotes__description">
+                            การมีความรู้เพียงอย่างเดียวนั้นยังไม่พอ<br>เราต้องรู้จักนำมันออกมาใช้<br>และการมีความตั้งใจ​อย่างเดียวนั้นยังน้อยไป<br>เราต้องรู้จักลงมือทำ<br><br>--Johann
+                            Wolfgang von Goethe</p>
+
+                    </div>
+
+                    <img src="img/quotes.png" alt="" class="quotes__img">
+                </div>
+            </div>
+
+
+        </section>
+
+        <!--==================== Skills ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My technical level</span>
+
+            <div class="skills__container container grid">
+                <!--==================== Skills 1 ====================-->
+                <div>
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Coding Languages</h1>
+                                <span class="skills__subtitle">ภาษาโปรแกรมที่สามารถเขียนได้</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__namber">75%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__html"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">CSS</h3>
+                                    <span class="skills__namber">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__css"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__namber">50%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__js"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">PHP</h3>
+                                    <span class="skills__namber">65%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__php"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">Dart (อยู่ระหว่างศึกษา)</h3>
+                                    <span class="skills__namber">15%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__dart"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--==================== Skills 2 ====================-->
+                <div>
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-wrench skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Tools</h1>
+                                <span class="skills__subtitle">เครื่องมือที่ใช้</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">VScode</h3>
+                                    <span class="skills__namber">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__vscode"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">Photoshop</h3>
+                                    <span class="skills__namber">65%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__photoshop"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__title">
+                                    <h3 class="skills__name">Flutter (อยู่ระหว่างการศึกษา)</h3>
+                                    <span class="skills__namber">15%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__flutter"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== Background ====================-->
+        <section class="background section">
+            <h2 class="section__title">Background</h2>
+            <span class="section__subtitle">My personal journey</span>
+
+            <div class="background__container container">
+                <div class="background__tabs">
+                    <div class="background__button button--flex background__active" data-target='#education'>
+                        <i class="uil uil-graduation-cap background__icon"></i>
+                        Education
+                    </div>
+
+                    <div class="background__button button--flex" data-target='#work'>
+                        <i class="uil uil-briefcase-alt background__icon"></i>
+                        Work
+                    </div>
+                </div>
+
+                <div class="background__sections">
+                    <!--==================== Background conten1 ====================-->
+                    <div class="background__content background__active" data-content id="education">
+                        <!--==================== Background 1 ====================-->
+                        <div class="background__data">
+                            <div>
+                                <h3 class="background__title">กันตทาราราม</h3>
+                                <span class="background__subtitle">อนุบาล - ป.3</span>
+                                <div class="background__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2004 - 2008
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="background__rounder"></span>
+                                <span class="background__line"></span>
+                            </div>
+                        </div>
+
+                        <!--==================== Background 2 ====================-->
+                        <div class="background__data">
+                            <div></div>
+
+                            <div>
+                                <span class="background__rounder"></span>
+                                <span class="background__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="background__title">มหาวีรานุวัตร</h3>
+                                <span class="background__subtitle">ป.4 - ป.6</span>
+                                <div class="background__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2009 - 2011
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== Background 3 ====================-->
+                        <div class="background__data">
+                            <div>
+                                <h3 class="background__title">เทพศิรินทร์</h3>
+                                <span class="background__subtitle">ม.1 - ม.6</span>
+                                <div class="background__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2012 - 2017
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="background__rounder"></span>
+                                <span class="background__line"></span>
+                            </div>
+                        </div>
+
+                        <!--==================== Background 4 ====================-->
+                        <div class="background__data">
+                            <div></div>
+
+                            <div>
+                                <span class="background__rounder"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="background__title">ราชภัฏบ้านสมเด็จเจ้าพระยา</h3>
+                                <span class="background__subtitle">ปี 1 - Now</span>
+                                <div class="background__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2018 - Now
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!--==================== Background  conten2 ====================-->
+                    <div class="background__content" data-content id="work">
+                        <!--==================== Background 1 ====================-->
+                        <div class="background__data">
+                            <div>
+                                <h3 class="background__title">7-ELEVEN</h3>
+                                <span class="background__subtitle">พนักงานพาร์ทไทม์ทั่วไป</span>
+                                <div class="background__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2018 - 2019
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="background__rounder"></span>
+                                <span class="background__line"></span>
+                            </div>
+                        </div>
+
+                        <!--==================== Background 2 ====================-->
+                        <div class="background__data">
+                            <div></div>
+
+                            <div>
+                                <span class="background__rounder"></span>
+                                <span class="background__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="background__title">Commart Thailand</h3>
+                                <span class="background__subtitle">Intel Staff<br>พาร์ทไทม์</span>
+                                <div class="background__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2019 - 2021
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== Background 3 ====================-->
+                        <div class="background__data">
+                            <div>
+                                <h3 class="background__title">Jps Creative Innovation Co., Ltd</h3>
+                                <span class="background__subtitle">พนักงานพาร์ทไทม์<br>ดูแลสินค้าระบบหลังบ้าน</span>
+                                <div class="background__calender">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    2019 - 2021
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="background__rounder"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--==================== Portfolio ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle">ผลงานล่าสุด</span>
+
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--==================== Portfolio 1 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="img/portfolio1.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Login Page</h3>
+                            <p class="portfolio__description">ใช้ภาษา HTML และ CSSออกแบบหน้าล็อคอินของเว็บไซค์ โดยที่
+                                User interface จะปรับให้เข้ากับอุปกรณ์ทั้งมือถือและคอมพิวเตอร์</p>
+                            <a href="https://augarh.github.io/LoginPage/"
+                                class="button button--flex button--small portfolio__button" target="_blank">
+                                เข้าชม
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== Portfolio 2 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="img/portfolio2.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">JPSPOS.com</h3>
+                            <p class="portfolio__description">ใช้ภาษา HTML ออกแบบหน้าเว็บไซค์ขายของให้กับ บริษัท เจพีเอส
+                                ครีเอทีฟ อินโนเวชั่น จำกัด ภายใต้บริการของ ShopUp</p>
+                            <a href="http://www.jpspos.com/" class="button button--flex button--small portfolio__button"
+                                target="_blank">
+                                เข้าชม
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--==================== Portfolio 3 ====================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="img/portfolio3.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Best Seller Calculator</h3>
+                            <p class="portfolio__description">ใช้ภาษา HTML และ PHP ออกแบบหน้าต่างและระบบคำนวน
+                                โดยที่โปรแกรมจะแสดงสินค้าที่ขายดีที่สุดจากที่ผู้ใช้ป้อนข้อมูลเข้าไป</p>
+                            <a href="https://augarh.github.io/BestSellerProgram/"
+                                class="button button--flex button--small portfolio__button" target="_blank">
+                                เข้าชม
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--==================== Contact Me ====================-->
+    <footer class="footer" id="contact">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Contact Me</h1>
+                    <span class="footer__subtitle">Gen in touch</span>
+                </div>
+
+                <div class="footer__links">
+                    <div class="contact__information">
+
+                        <i class="uil uil-phone contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Call Me</h3>
+                            <span class="contact__subtitle">080-919-1449</span>
+                        </div>
+
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Email</h3>
+                            <span class="contact__subtitle">auoo753421869@gmil.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">Thailand Bangkok 1234</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__hidden"></div>
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/au.garh/" target="_blank">
+                        <div class="contact__information">
+                            <i class="uil uil-facebook contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Facebook</h3>
+                                <span class="contact__subtitle">A'au Nuthawut</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/au.garh/" target="_blank">
+                        <div class="contact__information">
+                            <i class="uil uil-instagram contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Instagram</h3>
+                                <span class="contact__subtitle">au.garh</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://line.me/ti/p/~au_garh" target="_blank">
+                        <div class="contact__information">
+                            <i class="uil uil-line contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Line</h3>
+                                <span class="contact__subtitle">au_garh</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!--==================== ปุ่ม Scroll Up ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
