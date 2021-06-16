@@ -13,7 +13,7 @@
   --text-color: hsl(40, 8%, 45%);
   --text-color-light: hsl(40, 8%, 65%);
   --input-color: hsl(40, 70%, 96%);
-  --body-color: hsl(40, 60%, 99%);
+  --body-color: #fff;
   --container-color: #fff;
   --scroll-bar-color: hsl(40, 12%, 90%);
   --scroll-thumb-color: hsl(40, 12%, 80%);
@@ -292,6 +292,7 @@ img {
 .home__description {
   font-family: "Source Code Pro", monospace;
   font-size: 1.3rem;
+  font-weight: 600;
   position: relative;
   width: max-content;
   margin-top: 1.5rem;
@@ -528,33 +529,33 @@ img {
 }
 
 .skills__html {
-  width: 75%;
+  width: 40%;
 }
 
 .skills__css {
-  width: 70%;
+  width: 30%;
 }
 
 .skills__js {
-  width: 50%;
+  width: 10%;
 }
 
 .skills__php {
-  width: 65%;
+  width: 15%;
 }
 
 .skills__dart {
-  width: 15%;
+  width: 5%;
 }
 
 .skills__vscode {
-  width: 80%;
+  width: 70%;
 }
 .skills__photoshop {
-  width: 65%;
+  width: 25%;
 }
 .skills__flutter {
-  width: 15%;
+  width: 5%;
 }
 
 .skills__close .skills__list {
