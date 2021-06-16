@@ -266,7 +266,7 @@ img {
 }
 
 .home__blob {
-  width: 270px;
+  width: 200px;
   fill: var(--first-color);
 }
 
@@ -730,7 +730,6 @@ img {
 
 .contact__subtitle {
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
 }
 
 .contact__content {
@@ -775,6 +774,7 @@ img {
 .footer__subtitle,
 .contact__title,
 .contact__icon,
+.contact__subtitle,
 .footer__social {
   color: #fff;
 }
@@ -829,12 +829,12 @@ img {
   background-color: var(--text-color-light);
 }
 
-/*==================== MEDIA QUERIES ====================*/
-/* For small devices */
-@media screen and (max-width: 568px) {
+/*==================== จัดหน้าตามขนาดจอ ====================*/
+/* จอขนาดเล็ก */
+@media screen and (min-width: 375px) {
   .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .nav__menu {
@@ -848,7 +848,7 @@ img {
     grid-template-columns: 0.25fr 3fr;
   }
   .home__blob {
-    width: 250px;
+    width: 240px;
   }
 
   .skills__title {
@@ -864,7 +864,7 @@ img {
   }
 }
 
-/* For medium devices */
+/* จอขนาดกลาง */
 @media screen and (min-width: 568px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
@@ -1050,12 +1050,17 @@ img {
   }
 }
 
-/* For large devices */
+/* จอขนาดใหญ่ */
 @media screen and (min-width: 1024px) {
   .header,
   .main,
   .footer__container {
     padding: 0;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .home__blob {

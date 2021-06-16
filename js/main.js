@@ -115,7 +115,7 @@ window.addEventListener('scroll', scrollHeader)
 /*==================== โชว์ปุ่ม Scroll Up ====================*/ 
 function scrollUp(){
     const scrollup = document.getElementById('scroll-up');
-    // เลื่อนจอลงมาเกิน 560vw ให้เพิ่ม show-scroll ไปที่ scroll-top
+    // เลื่อนจอลงมาเกิน 560vw ให้เพิ่ม show-scroll ไปที่ scroll-up
     if(this.scrollY >= 560) scrollup.classList.add('show-scroll'); else scrollup.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
