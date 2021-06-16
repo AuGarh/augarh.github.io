@@ -789,6 +789,10 @@ img {
   color: var(--first-color-lighter);
 }
 
+.footer__hidden {
+  display: none;
+}
+
 /*========== ปุ่ม Scroll Up ==========*/
 .scrollup {
   position: fixed;
@@ -859,9 +863,6 @@ img {
     gap: .5rem;
   }
 
-  .footer__hidden {
-    display: none;
-  }
 }
 
 /* จอขนาดกลาง */
@@ -871,7 +872,7 @@ img {
   }
 
   .home__description {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 2rem;
   }
   .home__data {
@@ -906,6 +907,10 @@ img {
   }
   .footer {
     margin-top: 1.5rem;
+  }
+  
+  .footer__hidden {
+    display: inline;
   }
 }
 
@@ -963,6 +968,10 @@ img {
   .home__content {
     padding-top: 2rem;
     column-gap: 2rem;
+  }
+  .home__description {
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
   .home__blob {
     width: 370px;
