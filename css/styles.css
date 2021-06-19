@@ -322,6 +322,10 @@ img {
   animation: typewriter 4s steps(18) 1s forwards, blink .75s steps(18) infinite;
 }
 
+.home__description span{
+  color: var(--first-color);
+}
+
 @keyframes typewriter {
   to {
     left: 100%;
