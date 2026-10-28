@@ -69,21 +69,6 @@ tabs.forEach(tab => {
     })
 })
 
-/*==================== Portfolio Swiper  ====================*/
-let swiperPortfolio = new Swiper('.portfolio__container', {
-    cssMode: true,
-    loop: true,
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-
 /*==================== เปลี่ยนไฮไลท์ตามหัวข้อที่เลื่อนผ่าน ====================*/
 const sections = document.querySelectorAll('section[id]')
 
