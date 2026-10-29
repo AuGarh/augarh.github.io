@@ -1097,6 +1097,18 @@ img {
   max-width: 34ch;
 }
 
+.home__ats-link {
+  display: block;
+  margin-top: .75rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.home__ats-link:hover {
+  color: var(--first-color);
+}
+
 .skills__container.skills__container--tags {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2.5rem 2rem;
